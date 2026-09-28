@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan Interactive Web GIS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🗺️ Pakistan Interactive Web GIS</h1>
+            <p>Explore Cities, Weather Stations, and Geographic Data across Pakistan</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Map -->
+            <div id="map"></div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h3>⚙️ Map Controls</h3>
+
+                <!-- Basemap Selection -->
+                <div class="control-group">
+                    <label for="basemap-select">Basemap:</label>
+                    <select id="basemap-select">
+                        <option value="osm">OpenStreetMap</option>
+                        <option value="satellite">Satellite Imagery</option>
+                    </select>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Layer Controls -->
+                <h3>📍 Layers</h3>
+                <div class="control-group">
+                    <label>
+                        <input type="checkbox" id="cities-toggle" checked>
+                        Cities (15+)
+                    </label>
+                    <label>
+                        <input type="checkbox" id="weather-toggle" checked>
+                        Weather Stations (15+)
+                    </label>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Filter -->
+                <h3>🔍 Filter Cities</h3>
+                <div class="control-group">
+                    <label for="province-filter">Filter by Province:</label>
+                    <select id="province-filter">
+                        <option value="">All Provinces</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Sindh">Sindh</option>
+                        <option value="KPK">Khyber Pakhtunkhwa</option>
+                        <option value="Balochistan">Balochistan</option>
+                        <option value="Gilgit-Baltistan">Gilgit-Baltistan</option>
+                        <option value="Islamabad">Islamabad</option>
+                    </select>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Legend -->
+                <h3>📋 Legend</h3>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-icon city-icon"></div>
+                        <div class="legend-label">Major Cities</div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-icon weather-icon"></div>
+                        <div class="legend-label">Weather Stations</div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Tip:</strong> Click on any marker to view detailed information. Use the controls to toggle layers and switch basemaps.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
